@@ -150,6 +150,8 @@ function [x,y,z,info] = spot_mosek(A,b,c,K,options)
             status = spotsolstatus.STATUS_DUAL_INFEASIBLE;
           case 'PRIMAL_AND_DUAL_INFEASIBLE',
             status = spotsolstatus.STATUS_PRIMAL_AND_DUAL_INFEASIBLE;
+          case 'ILL_POSED'
+            status = spotsolstatus.STATUS_ILL_POSED;
           case 'UNKNOWN',
             status = spotsolstatus.STATUS_NUMERICAL_PROBLEMS;
         end
